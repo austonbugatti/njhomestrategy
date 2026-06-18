@@ -227,7 +227,7 @@ h1 {
   margin-right: auto;
   margin-left: auto;
   color: #fff;
-  font-size: clamp(2.35rem, 4.2vw, 4.55rem);
+  font-size: clamp(2.15rem, 3.75vw, 4.05rem);
   text-shadow: 0 12px 28px rgba(7, 13, 27, 0.42);
 }
 
@@ -783,7 +783,7 @@ h3 {
   }
 
   .hero h1 {
-    font-size: clamp(2.15rem, 10vw, 3.05rem);
+    font-size: clamp(2rem, 8.8vw, 2.75rem);
   }
 
   .hero-subheadline {
