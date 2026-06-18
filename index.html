@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NJ Home Strategy | Free New Jersey Home Buyer Strategy Sessions</title>
+    <meta
+      name="description"
+      content="Free strategy sessions for New Jersey home buyers. Understand affordability, taxes, neighborhoods, and next steps before touring homes."
+    />
+    <link rel="canonical" href="https://njhomestrategy.com/" />
+    <meta property="og:title" content="NJ Home Strategy | Free New Jersey Home Buyer Strategy Sessions" />
+    <meta
+      property="og:description"
+      content="Find the New Jersey towns that fit your budget, commute, and priorities before you start touring homes."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://njhomestrategy.com/" />
+    <meta name="twitter:card" content="summary" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <a class="brand" href="#home" aria-label="NJ Home Strategy home" data-tab-link="home">
+        <span class="brand-mark">NJ</span>
+        <span>NJ Home Strategy</span>
+      </a>
+
+      <button class="menu-button" type="button" data-menu-button aria-expanded="false" aria-controls="site-nav">
+        <span class="sr-only">Toggle navigation</span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" data-nav>
+        <a class="button button-primary header-cta" href="#book" data-tab-link="book">Find My Best-Fit Towns</a>
+      </nav>
+    </header>
+
+    <main class="page-shell">
+      <section class="hero" id="home">
+        <div class="hero-copy-block">
+          <p class="eyebrow">Free 30-Minute NJ Homebuyer Strategy Session</p>
+          <h1>Find the New Jersey towns that fit your budget, commute, and priorities.</h1>
+          <p class="hero-subheadline">Zillow helps you search listings. I help you decide where to search.</p>
+          <p class="hero-disclosure">
+            No cost to you. I may earn a referral fee if you buy with an agent I introduce.
+          </p>
+        </div>
+      </section>
+
+      <section class="deck" aria-label="NJ Home Strategy details">
+        <div class="deck-tabs" role="tablist" aria-label="Page sections">
+          <button class="deck-tab is-active" type="button" role="tab" aria-selected="true" data-tab-button="what-we-cover">
+            How we narrow your search
+          </button>
+          <button class="deck-tab" type="button" role="tab" aria-selected="false" data-tab-button="how-it-works">
+            How it works
+          </button>
+          <button class="deck-tab" type="button" role="tab" aria-selected="false" data-tab-button="why-free">
+            Why this is free
+          </button>
+          <button class="deck-tab deck-tab-cta" type="button" role="tab" aria-selected="false" data-tab-button="book">
+            Schedule session
+          </button>
+        </div>
+
+        <section class="deck-panel is-active" id="what-we-cover" role="tabpanel" data-tab-panel="what-we-cover">
+          <div class="cover-layout">
+            <div class="panel-intro">
+              <p class="eyebrow">How we narrow your search</p>
+              <h2>Stop guessing where to look.</h2>
+              <p>
+                Most buyers compare homes one at a time and can waste weeks looking in towns that do not actually fit
+                their budget, commute, taxes, schools, or lifestyle priorities.
+              </p>
+              <div class="focus-cards">
+                <article>
+                  <strong>Budget</strong>
+                  <span>See how taxes change what you can afford.</span>
+                </article>
+                <article>
+                  <strong>Commute</strong>
+                  <span>Compare towns around real drive and transit patterns.</span>
+                </article>
+                <article>
+                  <strong>Schools</strong>
+                  <span>Understand school-area tradeoffs before you tour.</span>
+                </article>
+              </div>
+              <div class="map-toggle" role="tablist" aria-label="Map views">
+                <button class="map-toggle-button is-active" type="button" data-map-button="taxes">Taxes</button>
+                <button class="map-toggle-button" type="button" data-map-button="commute">Commute</button>
+                <button class="map-toggle-button" type="button" data-map-button="schools">Schools</button>
+              </div>
+            </div>
+
+            <div class="map-stage">
+              <article class="example-card">
+                <strong>Example insight</strong>
+                <p>
+                  Because NJ tax rates vary so much, the same monthly budget can produce very different max home
+                  prices.
+                </p>
+                <div>
+                  <span><small>Town A</small>$480k</span>
+                  <span><small>Town B</small>$600k</span>
+                  <span><small>Town C</small>$710k</span>
+                </div>
+                <em>Illustrative only. Actual buying power depends on interest rates, loan term and down payment.</em>
+              </article>
+              <figure class="map-slide is-active" data-map-panel="taxes">
+                <img src="assets/taxes-map.png" alt="New Jersey property tax comparison map" />
+                <figcaption>
+                  <strong>Same $5,000/month budget. Different towns. Very different buying power.</strong>
+                  <span>Property taxes can materially change affordability town by town.</span>
+                </figcaption>
+              </figure>
+              <figure class="map-slide" data-map-panel="commute" hidden>
+                <img src="assets/commute-map.png" alt="New Jersey commute route tradeoff map" />
+                <figcaption>
+                  <strong>Commute tradeoffs</strong>
+                  <span>Road, rail, and route decisions can reshape which municipalities make sense.</span>
+                </figcaption>
+              </figure>
+              <figure class="map-slide" data-map-panel="schools" hidden>
+                <img src="assets/schools-map.png" alt="New Jersey school-area comparison map" />
+                <figcaption>
+                  <strong>School-area guidance</strong>
+                  <span>School considerations add another layer when selecting towns and neighborhoods.</span>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </section>
+
+        <section class="deck-panel" id="how-it-works" role="tabpanel" data-tab-panel="how-it-works" hidden>
+          <div class="panel-intro">
+              <p class="eyebrow">How it works</p>
+            <h2>Your NJ buying strategy before the search gets noisy.</h2>
+          </div>
+          <div class="steps-grid">
+            <article class="step-card">
+              <span class="step-number">01</span>
+              <h3>Tell me your goals</h3>
+              <p>Budget, commute, timing, lifestyle, school priorities, and target areas.</p>
+            </article>
+            <article class="step-card">
+              <span class="step-number">02</span>
+              <h3>Get a personalized town game plan</h3>
+              <p>We narrow your search to the towns and tradeoffs that make the most sense.</p>
+            </article>
+            <article class="step-card">
+              <span class="step-number">03</span>
+              <h3>Move forward with confidence</h3>
+              <p>When you are ready, I can introduce you to a trusted New Jersey buyer's agent.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="deck-panel" id="why-free" role="tabpanel" data-tab-panel="why-free" hidden>
+          <div class="split-section">
+            <article class="trust-card">
+              <p class="eyebrow">Why this is free</p>
+              <h2>No cost to you</h2>
+              <p>
+                I do not charge buyers for strategy sessions. If you choose to work with an agent I introduce and
+                eventually purchase a home, I may receive a referral fee from that agent's commission.
+              </p>
+            </article>
+            <article class="about-copy">
+              <p class="eyebrow">About Auston</p>
+              <h2>Meet Auston</h2>
+              <p>
+                I have built location-planning tools professionally for over a decade, and now use similar methods to
+                help New Jersey buyers compare towns, taxes, school-area considerations, commute patterns, and
+                affordability tradeoffs before entering the market.
+              </p>
+            </article>
+          </div>
+          <p class="trust-note">My goal is simple: help you build a smarter search before you start touring homes.</p>
+        </section>
+
+        <section class="deck-panel" id="book" role="tabpanel" data-tab-panel="book" hidden>
+          <div class="booking-panel">
+            <div class="booking-copy">
+              <p class="eyebrow">Book now</p>
+              <h2>Schedule My NJ Buying Strategy Session</h2>
+              <p>Pick a time directly below. No buyer fee, no obligation.</p>
+            </div>
+            <iframe
+              data-src="https://calendly.com/austonlende/30min?hide_gdpr_banner=1&primary_color=2368e8"
+              title="Schedule a free NJ Home Strategy session with Auston"
+              loading="lazy"
+            ></iframe>
+          </div>
+        </section>
+      </section>
+
+      <section class="final-cta">
+        <h2>Ready to narrow your NJ search?</h2>
+        <p>Book a free strategy session and leave with a clearer town-by-town game plan.</p>
+        <a class="button button-primary" href="#book" data-tab-link="book">Find My Best-Fit Towns</a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand" href="#home" aria-label="NJ Home Strategy home" data-tab-link="home">
+        <span class="brand-mark">NJ</span>
+        <span>NJ Home Strategy</span>
+      </a>
+      <p>Free New Jersey home buyer strategy sessions.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
