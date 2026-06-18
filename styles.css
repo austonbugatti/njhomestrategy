@@ -618,18 +618,18 @@ h3 {
 .profile-row {
   display: flex;
   align-items: center;
-  gap: 16px;
-  margin-bottom: 18px;
+  gap: 12px;
+  margin-bottom: 16px;
 }
 
 .profile-row img {
-  width: 76px;
-  height: 76px;
+  width: 48px;
+  height: 48px;
   flex: 0 0 auto;
   border: 1px solid var(--line);
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 14px 34px rgba(15, 23, 42, 0.12);
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.1);
 }
 
 .profile-row .eyebrow,
