@@ -9,7 +9,24 @@ const mapPanels = document.querySelectorAll("[data-map-panel]");
 
 const defaultTab = "what-we-cover";
 
-const setActiveTab = (tabId, updateHash = true) => {
+const scrollToTabPanel = (tabId, behavior = "smooth") => {
+  const panel = document.querySelector(`[data-tab-panel='${tabId}']`);
+  if (!panel) return;
+
+  const target = tabId === "book" ? panel.querySelector(".booking-panel") || panel : panel;
+  const headerOffset = header?.offsetHeight || 0;
+  const panelTop = target.getBoundingClientRect().top + window.scrollY - headerOffset - 14;
+  window.scrollTo({ top: Math.max(panelTop, 0), behavior });
+};
+
+const revealTabPanel = (tabId) => {
+  scrollToTabPanel(tabId);
+  setTimeout(() => scrollToTabPanel(tabId, "auto"), 300);
+  setTimeout(() => scrollToTabPanel(tabId, "auto"), 1000);
+  setTimeout(() => scrollToTabPanel(tabId, "auto"), 2200);
+};
+
+const setActiveTab = (tabId, updateHash = true, preserveScroll = true) => {
   const currentScroll = window.scrollY;
 
   if (tabId === "home") {
@@ -51,8 +68,10 @@ const setActiveTab = (tabId, updateHash = true) => {
 
   if (updateHash) {
     history.replaceState(null, "", `#${nextTab}`);
-    requestAnimationFrame(() => window.scrollTo(0, currentScroll));
-    setTimeout(() => window.scrollTo(0, currentScroll), 80);
+    if (preserveScroll) {
+      requestAnimationFrame(() => window.scrollTo(0, currentScroll));
+      setTimeout(() => window.scrollTo(0, currentScroll), 80);
+    }
   }
 
   if (nextTab === "book") {
@@ -83,7 +102,11 @@ menuButton?.addEventListener("click", () => {
 
 tabButtons.forEach((button) => {
   button.addEventListener("click", () => {
-    setActiveTab(button.dataset.tabButton);
+    const tabId = button.dataset.tabButton;
+    setActiveTab(tabId, true, tabId !== "book");
+    if (tabId === "book") {
+      revealTabPanel(tabId);
+    }
   });
 });
 
@@ -92,7 +115,10 @@ tabLinks.forEach((link) => {
     const tabId = link.dataset.tabLink;
     if (tabId) {
       event.preventDefault();
-      setActiveTab(tabId);
+      setActiveTab(tabId, true, tabId !== "book");
+      if (tabId === "book") {
+        revealTabPanel(tabId);
+      }
     }
 
     nav?.classList.remove("is-open");
